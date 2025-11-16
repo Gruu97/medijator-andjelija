@@ -241,11 +241,11 @@ header {
     margin: 0 0 30px 0;
 }
 /* Hero pozadine (Per-Page Overrides) - Nepromenjeno */
-.hero-bg-index { background-image: url('Images/2.jpg'); }
-.hero-bg-usluge { background-image: url('Images/4.jpg'); }
-.hero-bg-faq { background-image: url('Images/5.jpg'); }
-.hero-bg-kontakt { background-image: url('Images/1.jpg'); }
-.hero-bg-o-meni { background-image: url('Images/3.jpg'); }
+.hero-bg-index { background-image: url('2.jpg'); }
+.hero-bg-usluge { background-image: url('4.jpg'); }
+.hero-bg-faq { background-image: url('5.jpg'); }
+.hero-bg-kontakt { background-image: url('1.jpg'); }
+.hero-bg-o-meni { background-image: url('3.jpg'); }
 
 
 /* --- Hero Schedule (Forma kao Split CTA) - KORIGOVANO ZA ŠIRINU I STIL --- */
@@ -837,3 +837,4 @@ header.hero-bg-index .hero-logo {
 @media (max-width: 640px) {
     header.hero-bg-index .hero-logo { height: 72px; }
 }
+
