@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anđelija – Medijator | Kontakt</title>
+  <meta name="description" content="Kontaktirajte Anđeliju – medijator: adresa, telefon, email i kontakt forma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+   
+<header class="header--minimal">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="Images/7.svg" alt="Anđelija – Medijator logo" />
+      <span>Anđelija – Medijator</span>
+    </a>
+    <!-- Dodato: hamburger dugme -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Otvori meni">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav aria-label="Main navigation">
+      <ul id="main-menu">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="o-meni.html">O meni</a></li>
+        <li><a href="usluge.html">Usluge</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="active" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section class="section contact-split section-contrast">
+  <div class="container grid">
+    <div class="contact-info">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Započnite Put ka Sporazumu.</h2>
+      <div class="divider" aria-hidden="true"></div>
+
+      <!-- Sažet kontakt blok sa postojećim tekstom i ikonama -->
+      <div class="contact-summary">
+        <ul class="info-list">
+          <li>
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>Telefon: +381644081827</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>E-mail: andjelija@medijator.com</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <span>Radno Vreme: Pon–Pet, 09:00–17:00</span>
+          </li>
+        </ul>
+      </div>
+
+      
+    <div class="contact-form">
+      <span class="eyebrow">Konsultacija</span>
+      <h2>Zakažite Poverljivu Konsultaciju.</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <form action="#" method="post" novalidate>
+        <div class="form-grid">
+          <div class="full">
+            <label for="ime">Ime i Prezime</label>
+            <input id="ime" name="ime" type="text" placeholder="Vaše ime i prezime" required />
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="ime@primer.com" required />
+          </div>
+          <div>
+            <label for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" placeholder="+381 ..." />
+          </div>
+          <div class="full">
+            <label for="poruka">Poruka</label>
+            <textarea id="poruka" name="poruka" placeholder="Kako Vam mogu pomoći?"></textarea>
+          </div>
+        </div>
+        <div style="margin-top:14px;">
+          <button class="btn" type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Pošaljite Poruku / Zakažite Sastanak
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer uklonjen -->
+</body>
+</html>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

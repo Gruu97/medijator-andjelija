@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anđelija – Medijator | Početna</title>
+  <meta name="description" content="Medijacija – efikasan, poverljiv i pravno siguran put do sporazuma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="custom.css" /> <!-- override stilovi -->
+</head>
+<body>
+    <!-- Glavni navigacioni header (ostaje na vrhu) -->
+    <header class="site-header">
+        <div class="container">
+            <!-- Ako imaš navigaciju/logo, ostaje ovde -->
+        </div>
+    </header>
+  <header class="header--soft">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="Images/7.svg" alt="Anđelija – Medijator logo" />
+        <span>Anđelija – Medijator</span>
+      </a>
+      <!-- Dodato: hamburger dugme -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Otvori meni">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul id="main-menu">
+          <li><a class="active" href="index.html">Početna</a></li>
+          <li><a href="o-meni.html">O meni</a></li>
+          <li><a href="usluge.html">Usluge</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  
+  <!-- Hero odmah ispod menija -->
+  <header class="hero-full-bleed hero-bg-index">
+    <div class="container">
+        <!-- Veliki logo umesto subheading-a -->
+        <img class="hero-logo" src="Images/7.svg" alt="Anđelija – Medijator logo" />
+        <h1>Rešite Spor Bez Suda</h1>
+        <p class="hero-pasus">Ušteda vremena i novca, a privatnost je zagarantovana</p>
+        <a href="kontakt.html" class="cta-button">Zakažite Konsultaciju</a>
+    </div>
+  </header>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar section section-stripe" aria-label="Trust bar">
+    <div class="container">
+      <h2>Vaša Sigurnost. Moja Ekspertiza.</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <p>Pravni Temelj</p>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <p>Uvid u Rizik</p>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-lock"></i>
+          <p>100% Poverljivo</p>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-gavel"></i>
+          <p>Izvršna Snaga</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zašto Medijacija (premeštena ovde između Trust Bara i Usluga) -->
+ <section class="section why-mediate-section section-contrast">
+    <div class="container">
+        <h2>Zašto medijacija?</h2>
+        <p class="lead">Medijacija je strukturisan proces koji štedi vreme, čuva odnos i obezbeđuje potpunu diskreciju, uz jasnu pravnu formu sporazuma.</p>
+        <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> BRZINA - Rešavanje spora u sedmicama, ne godinama.</li>
+            <li><i class="fas fa-check-circle"></i> POVERLJIVOST - Proces zaštićen zakonom, ništa se ne koristi na sudu.</li>
+            <li><i class="fas fa-check-circle"></i> NIŽI TROŠKOVI - Znatno povoljnije od dugotrajnog parničenja.</li>
+        </ul>
+        <a href="kontakt.html" class="btn"><i class="fas fa-handshake"></i> Zakažite konsultaciju</a>
+    </div>
+</section>
+
+  <!-- Usluge (3 kolone) -->
+  <section class="section">
+    <div class="container">
+      <h2>Specijalizovane Oblasti Medijacije</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="services-grid">
+        <article class="service-card">
+          <i class="fa-solid fa-people-roof" aria-hidden="true"></i>
+          <h3>Porodična Medijacija</h3>
+          <p>Zaštita dečijih interesa i budućnosti porodice uz bezbedan, empatičan okvir.</p>
+          <a class="link-accent" href="usluge.html#porodicna">Saznajte Više</a>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+          <h3>Poslovna Medijacija</h3>
+          <p>Brzina rešenja uz očuvanje odnosa i reputacije – pragmatičan pristup.</p>
+          <a class="link-accent" href="usluge.html#poslovna">Saznajte Više</a>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+          <h3>Radni Sporovi</h3>
+          <p>Fer, strukturisan proces za razrešenje konflikata na radnom mestu bez sudskih troškova.</p>
+          <a class="link-accent" href="usluge.html#radni">Saznajte Više</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Duplikat "Zašto medijacija?" blok je uklonjen -->
+
+<header class="hero-full-bleed hero-bg-kontakt hero-schedule layout-split">
+  <div class="container schedule-grid">
+    <div class="hero-copy">
+      <h1>Zakažite konsultaciju danas.</h1>
+      <p class="hero-pasus">Kratka, fokusirana sesija — saznajte kako medijacija radi u vašoj situaciji.</p>
+      
+    </div>
+
+    <!-- Desna kolona: forma za zakazivanje -->
+    <div class="schedule-card">
+      <form class="schedule-form" action="kontakt.html" method="get" novalidate>
+        <div class="form-row">
+          <label for="ime">Ime i prezime</label>
+          <input id="ime" type="text" name="ime" placeholder="Ime i prezime" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="vaš@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="telefon">Telefon</label>
+          <input id="telefon" type="tel" name="telefon" placeholder="+381 6x xxx xxxx" required>
+        
+        <div class="form-row">
+          <label for="poruka">Poruka (opciono)</label>
+          <textarea id="poruka" name="poruka" rows="3" placeholder="Kratko opišite situaciju"></textarea>
+        </div>
+        <button type="submit" class="btn">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          Pošalji zahtev
+     <!--   </button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- Zamena postojećeg footer-a novom strukturom -->
+<!-- Footer uklonjen -->
+</body>
+</html>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

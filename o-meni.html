@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anđelija – Medijator | O meni</title>
+  <meta name="description" content="Anđelija Đurđević – diplomirani pravnik i sertifikovani medijator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+<header class="header--soft">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="Images/7.svg" alt="Anđelija – Medijator logo" />
+      <span>Anđelija – Medijator</span>
+    </a>
+    <!-- Dodato: hamburger dugme -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Otvori meni">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav aria-label="Main navigation">
+      <ul id="main-menu">
+        <li><a href="index.html">Početna</a></li>
+        <li><a class="active" href="o-meni.html">O meni</a></li>
+        <li><a href="usluge.html">Usluge</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <body>
+    
+        <header class="hero-full-bleed hero-bg-o-meni">
+            <div class="container">
+                <span class="subheading">O meni</span>
+                <h1>Iskustvo Pravnika, Veština Medijatora</h1>
+                <p class="hero-pasus">Ja sam Anđelija Đurđević. Kao Vaš neutralni partner, pomažem Vam da sami kreirate rešenje
+                    koje je pravedno i održivo, izbegavajući dugotrajan i iscrpljujući
+                    sudski proces.</p>
+                <a href="usluge.html" class="cta-button">Saznajte više o uslugama</a>
+            </div>
+        </header>
+    </body>
+    
+</main>
+
+<section class="section">
+  <div class="container">
+    <h2>Od Sudnice do Sporazuma: Moj Put ka Rešenju</h2>
+    <div class="divider"></div>
+    <div class="bio-grid">
+      <img class="biography-image" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Portret – Anđelija" />
+      <div class="bio-text">
+        <p class="lead">Nakon dugogodišnje prakse u pravnim poslovima, uvidela sam da su sudski procesi često destruktivni i neefikasni. Pravda ne mora značiti borbu.</p>
+        <p class="lead">Specijalizacija u osiguranju i porodičnom pravu dala mi je temelj. Medijaciju vidim kao human, civilizovan i najbrži put do trajnog dogovora.</p>
+        <p class="quote biography-quote">“Medijacija nije kompromis. Medijacija je kreiranje bolje budućnosti.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+   
+    <h3>Principi Moje Prakse</h3>
+     <p class="intro-text">Tri stuba na kojima počiva moj rad i filozofija rešavanja sporova.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fa-solid fa-stamp"></i>
+        <h3>Pravna Sigurnost</h3>
+        <p>Sporazumi pripremljeni i vođeni uz pravni okvir, sa izvršnom snagom.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Empatija i Poštovanje</h3>
+        <p>Proces koji čuje sve strane – miran ton, jasan smer.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Efikasnost i Brzina</h3>
+        <p>Strukturisani koraci do rezultata – bez odlaganja i nepotrebnih troškova.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<header class="hero-full-bleed hero-bg-kontakt hero-schedule layout-split">
+  <div class="container schedule-grid">
+    <div class="hero-copy">
+      <h1>Zakažite konsultaciju danas.</h1>
+      <p class="hero-pasus">Kratka, fokusirana sesija — saznajte kako medijacija radi u vašoj situaciji.</p>
+      
+    </div>
+
+    <!-- Desna kolona: forma za zakazivanje -->
+    <div class="schedule-card">
+      <form class="schedule-form" action="kontakt.html" method="get" novalidate>
+        <div class="form-row">
+          <label for="ime">Ime i prezime</label>
+          <input id="ime" type="text" name="ime" placeholder="Ime i prezime" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="vaš@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="telefon">Telefon</label>
+          <input id="telefon" type="tel" name="telefon" placeholder="+381 6x xxx xxxx" required>
+        
+        <div class="form-row">
+          <label for="poruka">Poruka (opciono)</label>
+          <textarea id="poruka" name="poruka" rows="3" placeholder="Kratko opišite situaciju"></textarea>
+        </div>
+        <button type="submit" class="btn">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          Pošalji zahtev
+     <!--   </button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- Zamena postojećeg footer-a novom strukturom -->
+<!-- Footer uklonjen -->
+</body>
+</html>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

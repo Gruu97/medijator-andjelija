@@ -1,0 +1,88 @@
+/* FAQ – veći i elegantniji izgled */
+.faq-section .container { max-width: 1100px; }
+
+.faq-section .accordion {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(18,29,49,0.75), rgba(18,29,49,0.9));
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.faq-section .ac-item + .ac-item {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.faq-section .ac-header {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--boja-tekst-svetla);
+  padding: 26px 32px;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: background 250ms ease, color 250ms ease;
+  border: 0;
+}
+
+.faq-section .ac-header:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--boja-sekundarna);
+}
+
+.faq-section .ac-header i {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--boja-sekundarna);
+  border-radius: 50%;
+  color: var(--boja-sekundarna);
+  font-size: 0.95rem;
+  transition: transform 250ms ease, background 250ms ease, color 250ms ease;
+}
+
+.faq-section .ac-header.active {
+  color: var(--boja-sekundarna);
+  background: rgba(255,255,255,0.05);
+}
+
+.faq-section .ac-header.active i {
+  transform: rotate(45deg);
+  background: var(--boja-sekundarna);
+  color: #0f1b34;
+}
+
+.faq-section .ac-content {
+  display: none;
+  background: rgba(12,20,36,0.85);
+  padding: 0 32px 26px;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.92);
+}
+
+.faq-section .ac-content p {
+  margin: 0;
+  padding: 12px 0 0;
+}
+
+/* Responsivnost */
+@media (max-width: 992px) {
+  .faq-section .accordion { max-width: 100%; margin: 0 20px; }
+  .faq-section .ac-header { padding: 22px 24px; font-size: 1.15rem; }
+  .faq-section .ac-header i { width: 28px; height: 28px; }
+  .faq-section .ac-content { padding: 0 24px 22px; font-size: 1.05rem; }
+}
+@media (max-width: 640px) {
+  .faq-section .ac-header { padding: 20px 18px; font-size: 1.05rem; }
+  .faq-section .ac-content { padding: 0 18px 20px; font-size: 1rem; }
+}
