@@ -297,7 +297,114 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
     .hero-schedule .schedule-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px;
+        /* ======================================================
+   UNIVERZALNI DIZAJN ZA SVE FORME (Home + Kontakt)
+   ====================================================== */
+
+/* 1. GLAVNI OKVIR FORME (Zajednički stil za obe klase) */
+.schedule-card,
+.contact-form {
+  background: var(--boja-primarna-kartica);
+  border: 2px solid var(--boja-sekundarna); 
+  border-radius: var(--radius);
+  padding: 40px; 
+  box-shadow: var(--shadow-card);
+  color: var(--boja-bela);
+  width: 100%; 
+  max-width: 600px; /* Ograničava širinu da ne bude preširoko */
+  margin: 0 auto;   /* Centriranje */
+  overflow: hidden; 
+  text-align: left;
+}
+
+/* 2. INPUT POLJA I TEXTAREA (Tamna tema svuda) */
+.schedule-card input:not([type="submit"]), 
+.schedule-card textarea,
+.contact-form input:not([type="submit"]), 
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px; 
+    /* Forsiramo tamnu boju i sklanjamo belu */
+    background-color: rgba(255, 255, 255, 0.07) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    color: #ffffff !important; 
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: none; 
+    
+    /* Sklanja default stilove telefona (iPhone/Android) */
+    -webkit-appearance: none; 
+    appearance: none; 
+}
+
+/* Boja placeholder teksta (sivkasta) */
+.schedule-card input::placeholder, 
+.schedule-card textarea::placeholder,
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Fokus stanje (Zlatni okvir na klik) */
+.schedule-card input:focus, 
+.schedule-card textarea:focus,
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--boja-sekundarna); 
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    outline: none;
+}
+
+/* 3. LABELE (Naslovi iznad polja) */
+.schedule-card label,
+.contact-form label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 8px; 
+    color: var(--boja-sekundarna); 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 4. DUGME (Rešen problem sa dugačkim tekstom) */
+.schedule-card button[type="submit"],
+.schedule-card .btn,
+.contact-form button[type="submit"],
+.contact-form .btn {
+    width: 100%; 
+    padding: 16px 20px;
+    font-size: 0.95rem; 
+    line-height: 1.4;
+    text-align: center;
+    
+    /* Ovo dozvoljava tekstu da pređe u novi red */
+    white-space: normal; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    
+    background-color: var(--boja-sekundarna);
+    color: var(--boja-primarna-tamna);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    text-transform: uppercase;
+}
+
+/* Hover efekat za dugme */
+.schedule-card button[type="submit"]:hover,
+.contact-form button[type="submit"]:hover {
+    background-color: #E9B63B;
+    transform: translateY(-2px);
+}
+gap: 30px;
     }
     .hero-schedule .hero-copy {
         text-align: center; 
@@ -315,83 +422,6 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
   margin-bottom: 20px;
 }
 
-/* Forma Kartica */
-/* Glavni okvir forme */
-.schedule-card {
-  background: var(--boja-primarna-kartica);
-  border: 2px solid var(--boja-sekundarna); 
-  border-radius: var(--radius);
-  padding: 40px; 
-  box-shadow: var(--shadow-card);
-  color: var(--boja-bela);
-  max-width: 600px; 
-  width: 100%; 
-  overflow: hidden; 
-  text-align: left;
-}
-
-/* INPUT POLJA - Tamna pozadina umesto bele */
-.schedule-card input:not([type="submit"]), 
-.schedule-card textarea {
-    width: 100%;
-    padding: 14px 18px; 
-    /* Ovo rešava problem belih polja na slici */
-    background-color: rgba(255, 255, 255, 0.07) !important; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    color: #ffffff !important; /* Bela slova */
-    border-radius: 8px;
-    margin-bottom: 20px; 
-    font-size: 1rem;
-    font-family: inherit;
-    box-shadow: none; 
-    appearance: none; /* Uklanja default stilove telefona */
-}
-
-/* Boja placeholder teksta (sivkasta) */
-.schedule-card input::placeholder,
-.schedule-card textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Kada klikneš na polje (Fokus) */
-.schedule-card input:focus, 
-.schedule-card textarea:focus {
-    border-color: var(--boja-sekundarna); 
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    outline: none;
-}
-
-/* Labele (Imena iznad polja) */
-.schedule-card label {
-    display: block;
-    font-size: 0.95rem;
-    margin-bottom: 8px; 
-    color: var(--boja-sekundarna); 
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* DUGME - Popravljeno da tekst stane lepo */
-.schedule-card button[type="submit"],
-.schedule-card .btn {
-    width: 100%; 
-    padding: 16px;
-    font-size: 0.95rem; /* Malo manji font da stane sve */
-    line-height: 1.4;
-    text-align: center;
-    white-space: normal; /* Dozvoljava tekstu da pređe u novi red ako je dugačak */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    background-color: var(--boja-sekundarna);
-    color: var(--boja-primarna-tamna);
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: var(--shadow-button);
-}
 
 /*
 ======================================================
