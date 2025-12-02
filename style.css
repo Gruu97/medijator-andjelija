@@ -150,48 +150,74 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
 .nav { position: relative; }
 .nav-toggle {
   display: none;
- /* --- HAMBURGER DUGME (Novi Stil) --- */
+/* --- Ovo ide odmah ispod .nav { position: relative; } --- */
+
+/* --- HAMBURGER DUGME --- */
 .nav-toggle {
   display: none; /* Na desktopu skriveno */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 48px;  /* Veća površina za klik */
+  width: 48px;  
   height: 48px;
-  border: none; /* Uklonjen okvir */
+  border: none; /* Bez okvira */
   background: transparent;
   cursor: pointer;
   padding: 0;
   z-index: 1001; /* Iznad svega */
 }
 
-/* Stil za linije */
+/* Stil za linije hamburgera */
 .nav-toggle .bar {
   display: block;
-  width: 30px;        /* Šire linije */
-  height: 3px;        /* Deblje linije */
-  background-color: var(--boja-sekundarna); /* Zlatna boja (ili stavi var(--boja-bela)) */
-  border-radius: 3px; /* Zaobljene ivice linija */
-  margin: 3px 0;      /* Razmak između linija */
+  width: 30px;        
+  height: 3px;        
+  background-color: var(--boja-sekundarna); /* Zlatna boja */
+  border-radius: 3px; 
+  margin: 3px 0;      
   transition: all 0.3s ease-in-out;
 }
 
 /* Animacija u X (Kada je meni otvoren) */
-/* Gornja linija se spušta i rotira */
 .nav.open .nav-toggle .bar:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
-
-/* Srednja linija nestaje */
 .nav.open .nav-toggle .bar:nth-child(2) {
   opacity: 0;
-  transform: translateX(-10px); /* Lep efekat nestajanja u stranu */
+  transform: translateX(-10px); 
 }
-
-/* Donja linija se diže i rotira */
 .nav.open .nav-toggle .bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
+/* --- MOBILNI MENI PODEŠAVANJA --- */
+@media (max-width: 992px) {
+  .nav-toggle { display: inline-flex; } /* Prikaži dugme na mobilnom */
+  
+  .nav nav ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Lepi se tačno ispod headera */
+    left: 0; 
+    right: 0;
+    width: 100%;
+    margin: 0; 
+    padding: 20px 16px;
+    background: var(--boja-primarna-kartica);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+  
+  /* Kada je dodata klasa .open (preko JS-a), prikaži meni */
+  .nav.open nav ul { display: flex; }
+  
+  .nav .brand { flex: 1; }
+  .nav a { padding: 12px 10px; display: block; }
+}
+
 
 @media (max-width: 992px) {
   .nav-toggle { display: inline-flex; }
@@ -888,6 +914,7 @@ header.hero-bg-index .hero-logo {
     }
 }
   
+
 
 
 
