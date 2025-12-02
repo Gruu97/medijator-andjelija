@@ -110,13 +110,14 @@ a { color: var(--boja-tekst-svetla); text-decoration: none; }
 a:hover, a:focus { color: var(--boja-sekundarna); }
 
 /* Navigacija (Nepromenjeno) */
-header {
+.header--soft {
   background: var(--boja-primarna-kartica);
   color: var(--boja-tekst-svetla);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1000; /* Mora biti veći od Hero sekcije */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .brand { color: var(--boja-tekst-svetla); font-weight: 600; }
@@ -144,24 +145,27 @@ header {
   color: var(--boja-sekundarna);
 }
 /* MOBILE NAV – HAMBURGER */
-.nav { position: relative; }
 .nav-toggle {
   display: none;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 40px; height: 40px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: none; /* Uklonjen okvir */
   background: transparent;
-  color: var(--boja-tekst-svetla);
   cursor: pointer;
+  padding: 0;
+  z-index: 1001;
 }
 .nav-toggle .bar {
   display: block;
-  width: 20px; height: 2px;
-  background: var(--boja-tekst-svetla);
+  width: 30px; /* Šire linije */
+  height: 3px; /* Deblje linije */
+  background: var(--boja-sekundarna); /* Zlatna boja */
+  border-radius: 3px;
   margin: 3px 0;
-  transition: transform 200ms ease, opacity 200ms ease;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 992px) {
   .nav-toggle { display: inline-flex; }
@@ -830,10 +834,21 @@ header.hero-bg-index .hero-logo {
 
 /* Tablet */
 @media (max-width: 992px) {
-    header.hero-bg-index .hero-logo { height: 96px; }
+    .hero-bg-index .hero-logo { 
+        height: 96px; 
+        margin: 0 auto 12px auto; /* Tablet: Centrirano */
+    }
 }
 
 /* Mobilni */
 @media (max-width: 640px) {
-    header.hero-bg-index .hero-logo { height: 72px; }
-}
+    .hero-bg-index .hero-logo { 
+        height: 80px; /* Malo manji logo za telefon */
+        margin: 0 auto 15px auto; /* Mobilni: Centrirano */
+    }
+.hero-full-bleed .container {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
