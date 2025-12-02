@@ -110,14 +110,17 @@ a { color: var(--boja-tekst-svetla); text-decoration: none; }
 a:hover, a:focus { color: var(--boja-sekundarna); }
 
 /* Navigacija (Nepromenjeno) */
-header {
+/* IZMENJENO: Ciljamo specifičnu klasu navigacije i povećavamo z-index */
+.header--soft {
   background: var(--boja-primarna-kartica);
   color: var(--boja-tekst-svetla);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1000; /* Povećano sa 50 na 1000 da bude iznad svega */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Osigurava da se ne skuplja */
 }
+
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .brand { color: var(--boja-tekst-svetla); font-weight: 600; }
 /* Dodato: poravnanje i razmak za logo + tekst */
@@ -837,4 +840,5 @@ header.hero-bg-index .hero-logo {
 @media (max-width: 640px) {
     header.hero-bg-index .hero-logo { height: 72px; }
 }
+
 
