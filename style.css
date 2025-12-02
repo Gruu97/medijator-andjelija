@@ -316,6 +316,7 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
 }
 
 /* Forma Kartica */
+/* Glavni okvir forme */
 .schedule-card {
   background: var(--boja-primarna-kartica);
   border: 2px solid var(--boja-sekundarna); 
@@ -328,23 +329,68 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
   overflow: hidden; 
   text-align: left;
 }
-.schedule-card input:not([type="submit"]), .schedule-card textarea {
+
+/* INPUT POLJA - Tamna pozadina umesto bele */
+.schedule-card input:not([type="submit"]), 
+.schedule-card textarea {
     width: 100%;
-    padding: 12px 18px; 
-    background: rgba(255, 255, 255, 0.05); 
+    padding: 14px 18px; 
+    /* Ovo rešava problem belih polja na slici */
+    background-color: rgba(255, 255, 255, 0.07) !important; 
     border: 1px solid rgba(255, 255, 255, 0.2); 
-    color: var(--boja-bela); 
-    border-radius: 6px;
-    margin-bottom: 15px; 
-    font-size: 1.05rem;
-    box-shadow: var(--shadow-inset); 
+    color: #ffffff !important; /* Bela slova */
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: none; 
+    appearance: none; /* Uklanja default stilove telefona */
 }
+
+/* Boja placeholder teksta (sivkasta) */
+.schedule-card input::placeholder,
+.schedule-card textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Kada klikneš na polje (Fokus) */
+.schedule-card input:focus, 
+.schedule-card textarea:focus {
+    border-color: var(--boja-sekundarna); 
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    outline: none;
+}
+
+/* Labele (Imena iznad polja) */
 .schedule-card label {
     display: block;
     font-size: 0.95rem;
-    margin-bottom: 5px; 
+    margin-bottom: 8px; 
     color: var(--boja-sekundarna); 
     font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* DUGME - Popravljeno da tekst stane lepo */
+.schedule-card button[type="submit"],
+.schedule-card .btn {
+    width: 100%; 
+    padding: 16px;
+    font-size: 0.95rem; /* Malo manji font da stane sve */
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal; /* Dozvoljava tekstu da pređe u novi red ako je dugačak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: var(--boja-sekundarna);
+    color: var(--boja-primarna-tamna);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
 }
 
 /*
