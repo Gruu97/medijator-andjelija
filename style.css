@@ -150,22 +150,49 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
 .nav { position: relative; }
 .nav-toggle {
   display: none;
-  align-items: center;
+ /* --- HAMBURGER DUGME (Novi Stil) --- */
+.nav-toggle {
+  display: none; /* Na desktopu skriveno */
+  flex-direction: column;
   justify-content: center;
-  width: 40px; height: 40px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
+  align-items: center;
+  width: 48px;  /* Veća površina za klik */
+  height: 48px;
+  border: none; /* Uklonjen okvir */
   background: transparent;
-  color: var(--boja-tekst-svetla);
   cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* Iznad svega */
 }
+
+/* Stil za linije */
 .nav-toggle .bar {
   display: block;
-  width: 20px; height: 2px;
-  background: var(--boja-tekst-svetla);
-  margin: 3px 0;
-  transition: transform 200ms ease, opacity 200ms ease;
+  width: 30px;        /* Šire linije */
+  height: 3px;        /* Deblje linije */
+  background-color: var(--boja-sekundarna); /* Zlatna boja (ili stavi var(--boja-bela)) */
+  border-radius: 3px; /* Zaobljene ivice linija */
+  margin: 3px 0;      /* Razmak između linija */
+  transition: all 0.3s ease-in-out;
 }
+
+/* Animacija u X (Kada je meni otvoren) */
+/* Gornja linija se spušta i rotira */
+.nav.open .nav-toggle .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+/* Srednja linija nestaje */
+.nav.open .nav-toggle .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px); /* Lep efekat nestajanja u stranu */
+}
+
+/* Donja linija se diže i rotira */
+.nav.open .nav-toggle .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 @media (max-width: 992px) {
   .nav-toggle { display: inline-flex; }
   .nav nav ul {
@@ -186,10 +213,6 @@ a:hover, a:focus { color: var(--boja-sekundarna); }
   .nav .brand { flex: 1; }
   .nav a { padding: 12px 10px; }
 }
-/* Animacija hamburger → X */
-.nav.open .nav-toggle .bar:nth-child(1) { transform: translateY(5px) rotate(45deg); }
-.nav.open .nav-toggle .bar:nth-child(2) { opacity: 0; }
-.nav.open .nav-toggle .bar:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 /* --- Hero Full-Bleed (Zajednički stil za sve Heroe) --- */
 .hero-full-bleed {
@@ -840,5 +863,6 @@ header.hero-bg-index .hero-logo {
 @media (max-width: 640px) {
     header.hero-bg-index .hero-logo { height: 72px; }
 }
+
 
 
