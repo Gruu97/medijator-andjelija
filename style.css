@@ -479,3 +479,57 @@ RESPONSIVNOST
     .services-grid, .values-grid, .trust-bar .trust-grid { grid-template-columns: 1fr; margin: 0 15px; }
     .hero-full-bleed h1 { font-size: 2.2rem; }
 }
+/* --- UNIVERSAL FIX ZA FORME (LEPI NA DNO FAJLA) --- */
+
+/* 1. Nateraj polja da budu tamna i ukloni beli browser stil */
+.schedule-card input,
+.schedule-card textarea,
+.contact-form input,
+.contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.07) !important; /* Tamna providna */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;   /* Diskretan okvir */
+    color: #ffffff !important;           /* Bela slova */
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    font-family: inherit !important;
+    
+    /* KLJUČNO ZA MOBILNE: Uklanja default beli izgled telefona */
+    -webkit-appearance: none !important; 
+    appearance: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Boja teksta dok kucaš (placeholder) */
+.schedule-card input::placeholder,
+.schedule-card textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 3. Kada klikneš na polje (Zlatni okvir) */
+.schedule-card input:focus,
+.schedule-card textarea:focus {
+    border-color: #C8963D !important; /* Tvoja zlatna boja */
+    outline: none !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 4. POPRAVKA DUGMETA (Da tekst ne ispada) */
+.schedule-card button,
+.schedule-card input[type="submit"],
+.schedule-card .btn {
+    width: 100% !important;
+    height: auto !important;       /* Dozvoli da raste ako ima puno teksta */
+    white-space: normal !important; /* Dozvoli prelamanje teksta u novi red */
+    padding: 15px 20px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 15px !important;
+    background-color: #C8963D !important;
+    color: #0D1B2A !important;
+    border: none !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
