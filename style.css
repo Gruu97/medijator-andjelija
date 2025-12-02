@@ -863,6 +863,32 @@ header.hero-bg-index .hero-logo {
 @media (max-width: 640px) {
     header.hero-bg-index .hero-logo { height: 72px; }
 }
+  /* --- KONTROLA VELIČINE LOGOTIPA --- */
+
+/* Osnovna veličina za desktop */
+.hero-bg-index .hero-logo {
+    height: 120px;           /* Ograničavamo visinu */
+    width: auto;             /* Širina se prilagođava automatski */
+    display: block;
+    margin: 0 auto 20px auto; /* Centriranje: gore 0, levo/desno auto, dole 20px */
+}
+
+/* Tablet (manji ekrani) */
+@media (max-width: 992px) {
+    .hero-bg-index .hero-logo { 
+        height: 96px; 
+    }
+}
+
+/* Mobilni telefoni (tvoj slučaj sa slike) */
+@media (max-width: 640px) {
+    .hero-bg-index .hero-logo { 
+        height: 80px;  /* Dovoljno malo da stane lepo */
+        margin-bottom: 15px;
+    }
+}
+  
+
 
 
 
