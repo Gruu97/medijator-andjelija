@@ -144,49 +144,33 @@ header {
   color: var(--boja-sekundarna);
 }
 /* MOBILE NAV – HAMBURGER */
-.nav { position: relative; }
 .nav-toggle {
   display: none;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 40px; height: 40px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: none;
   background: transparent;
-  color: var(--boja-tekst-svetla);
   cursor: pointer;
+  padding: 0;
+  z-index: 1001;
 }
 .nav-toggle .bar {
   display: block;
-  width: 20px; height: 2px;
-  background: var(--boja-tekst-svetla);
+  width: 30px;
+  height: 3px;
+  background: var(--boja-sekundarna);
+  border-radius: 3px;
   margin: 3px 0;
-  transition: transform 200ms ease, opacity 200ms ease;
+  transition: all 0.3s ease-in-out;
 }
-@media (max-width: 992px) {
-  .nav-toggle { display: inline-flex; }
-  .nav nav ul {
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0; right: 0;
-    margin: 0; padding: 12px 16px;
-    background: var(--boja-primarna-kartica);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-    flex-direction: column;
-    gap: 8px;
-    z-index: 100;
-  }
-  .nav.open nav ul { display: flex; }
-  .nav .brand { flex: 1; }
-  .nav a { padding: 12px 10px; }
-}
-/* Animacija hamburger → X */
-.nav.open .nav-toggle .bar:nth-child(1) { transform: translateY(5px) rotate(45deg); }
-.nav.open .nav-toggle .bar:nth-child(2) { opacity: 0; }
-.nav.open .nav-toggle .bar:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+/* Animacija hamburgera */
+.nav.open .nav-toggle .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav.open .nav-toggle .bar:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+.nav.open .nav-toggle .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* --- Hero Full-Bleed (Zajednički stil za sve Heroe) --- */
 .hero-full-bleed {
@@ -837,3 +821,4 @@ header.hero-bg-index .hero-logo {
 @media (max-width: 640px) {
     header.hero-bg-index .hero-logo { height: 72px; }
 }
+
